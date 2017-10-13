@@ -12,7 +12,8 @@ RUN apt-get update --fix-missing && \
   apt-get update && \
   apt-get remove -y nodejs && \
   curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
-  apt-get install -y nodejs
+  apt-get install -y nodejs && \
+  apt-get -y install zip
 
 COPY installCatalog.sh /installCatalog.sh
 RUN chmod +x /installCatalog.sh
