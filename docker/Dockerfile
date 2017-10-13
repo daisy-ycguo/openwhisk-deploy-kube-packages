@@ -15,6 +15,6 @@ RUN apt-get update --fix-missing && \
   apt-get install -y nodejs
 
 COPY installCatalog.sh /installCatalog.sh
-RUN chmod +X /installCatalog.sh
+RUN chmod +x /installCatalog.sh
 
 CMD ["/installCatalog.sh"]
