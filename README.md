@@ -31,3 +31,11 @@ kubectl apply -f packageinstaller.yml
 |DB_PREFIX|String|The db prefix for your alarm package|
 |APIHOST|String|IP address of your OpenWhisk host|
 |AUTH|String|The OpenWhisk auth key to use when installing the actions. Typically this would be the auth key for `whisk.system`|
+
+## Install alarm provider
+```
+wsk trigger create every-20 --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" -i
+```
+```
+wsk activation poll -i
+```
