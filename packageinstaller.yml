@@ -18,7 +18,7 @@ spec:
         image: daisyycguo/packageinstall
         env:
         - name: "APIHOST_URL"
-          value: "https://nginx.openwhisk:443"
+          value: "nginx.openwhisk"
         - name: "DB_URL"
           value: "http://whisk_admin:some_passw0rd@couchdb.openwhisk:5984"
         - name: "DB_PREFIX"
