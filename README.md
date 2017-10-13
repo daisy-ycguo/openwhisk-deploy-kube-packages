@@ -27,7 +27,7 @@ kubectl apply -f packageinstaller.yml
 |Name|Type|Description|
 |---|---|---|
 |APIHOST_URL|URL|IP address of your OpenWhisk host|
-|DB_URL|The connection url for your DB |
+|DB_URL|URL|The connection url for your DB |
 |DB_PREFIX|String|The db prefix for your alarm package|
 |APIHOST|String|IP address of your OpenWhisk host|
 |AUTH|String|The OpenWhisk auth key to use when installing the actions. Typically this would be the auth key for `whisk.system`|
