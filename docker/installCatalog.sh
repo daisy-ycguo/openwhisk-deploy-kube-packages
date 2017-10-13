@@ -20,5 +20,4 @@ pushd /incubator-openwhisk-package-alarms
 popd
 
 echo "successfully setup alarm package andalarm package and system catalog"
-sleep inf
 
