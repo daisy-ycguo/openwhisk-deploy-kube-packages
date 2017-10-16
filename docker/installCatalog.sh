@@ -1,14 +1,8 @@
 #!/bin/bash
 set -ex
 
-git clone https://github.com/apache/incubator-openwhisk.git
-git clone https://github.com/apache/incubator-openwhisk-package-alarms.git
-git clone https://github.com/apache/incubator-openwhisk-catalog.git
-
 pushd /incubator-openwhisk
   export OPENWHISK_HOME=$(pwd)
-  curl https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk -o ./bin/wsk
-  chmod +x ./bin/wsk
 popd
 
 pushd /incubator-openwhisk-catalog
