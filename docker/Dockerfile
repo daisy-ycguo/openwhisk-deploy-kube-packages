@@ -19,12 +19,14 @@ COPY installCatalog.sh /installCatalog.sh
 RUN chmod +x /installCatalog.sh
 
 RUN git clone https://github.com/apache/incubator-openwhisk.git
-RUN git clone https://github.com/apache/incubator-openwhisk-package-alarms.git
+RUN git clone https://github.com/daisy-ycguo/incubator-openwhisk-package-alarms.git
 RUN git clone https://github.com/apache/incubator-openwhisk-catalog.git
 
 RUN curl https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk -o ./incubator-openwhisk/bin/wsk
 RUN chmod +x ./incubator-openwhisk/bin/wsk
 
 RUN cd incubator-openwhisk-package-alarms
+RUN git checkout stable origin/stable
+RUN cd ..
 
 CMD ["/installCatalog.sh"]
