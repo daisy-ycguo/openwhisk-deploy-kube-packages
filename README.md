@@ -19,10 +19,12 @@ kubectl apply -f alarmprovider.yml
 |ENDPOINT_AUTH|String|The OpenWhisk auth key to use when installing the actions. Typically this would be the auth key for `whisk.system`|
 
 ### Install catalog package and alarm package
-Config the environment variables with correct values in yml file, and then
+Config the environment variables with correct values in yml file. Make sure the APIHOST_URL, DB_URL, APIHOST are set to correct IP address. Then
 ```
 kubectl apply -f packageinstaller.yml
 ```
+
+
 ### Mandatory Environment Variables
 |Name|Type|Description|
 |---|---|---|
