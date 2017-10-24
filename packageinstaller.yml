@@ -15,7 +15,7 @@ spec:
       containers:
       - name: packageinstaller
         imagePullPolicy: IfNotPresent 
-        image: daisyycguo/packageinstaller:0.8
+        image: daisyycguo/packageinstall:0.8
         env:
         - name: "APIHOST_URL"
           value: "10.0.0.144"
