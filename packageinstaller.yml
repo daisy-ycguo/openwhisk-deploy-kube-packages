@@ -15,7 +15,7 @@ spec:
       containers:
       - name: packageinstaller
         imagePullPolicy: IfNotPresent 
-        image: daisyycguo/packageinstaller
+        image: daisyycguo/packageinstaller:0.8
         env:
         - name: "APIHOST_URL"
           value: "10.0.0.144"
@@ -23,6 +23,8 @@ spec:
           value: "http://whisk_admin:some_passw0rd@10.0.0.41:5984"
         - name: "DB_PREFIX"
           value: "undefined"
+        - name: "Q_DB_PREFIX"
+          value: "mq_prefix"
         - name: "APIHOST"
           value: "10.0.0.144"
         - name: "AUTH"

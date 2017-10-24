@@ -13,5 +13,10 @@ pushd /incubator-openwhisk-package-alarms
   ./installCatalog.sh $AUTH $APIHOST_URL $DB_URL $DB_PREFIX $APIHOST
 popd
 
+pushd /incubator-openwhisk-package-kafka
+  ./installKafka.sh $AUTH $APIHOST_URL $DB_URL $Q_DB_PREFIX $APIHOST
+  ./installCatalog.sh $AUTH $APIHOST_URL $DB_URL $Q_DB_PREFIX $APIHOST
+popd
+
 echo "successfully setup alarm package andalarm package and system catalog"
 
