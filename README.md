@@ -63,7 +63,7 @@ wsk activation poll -i
 ## Kafka package test
 Create a kafka package binding:
 ```
-wsk package binding /whisk.system/messaging myKafkaPkg -p brokers "[\"kafka_host1:9093\", \"kafka_host2:9093\"]" -i
+wsk package bind /whisk.system/messaging myKafkaPkg -p brokers "[\"kafka_host1:9093\", \"kafka_host2:9093\"]" -i
 ```
 Create a trigger:
 ```
@@ -71,7 +71,7 @@ wsk trigger create MyKafkaTrigger -f /myKafkaPkg/kafkaFeed -p topic in-topic -i
 ```
 Send a message to kafka topic by invoking the action `kafkaProduce`:
 ```
-wsk action invoke /myKafkaPkg/kafkaProduce -p topic in-topic -p value "this is a message" -i
+wsk action invoke myKafkaPkg/kafkaProduce -p topic in-topic -p value "this is a message" -i
 ```
 Check activation log to see `MyKafkaTrigger` is triggered when a new message is sent.
 ```
