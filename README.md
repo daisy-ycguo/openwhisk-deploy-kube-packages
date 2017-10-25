@@ -73,7 +73,7 @@ Send a message to kafka topic by invoking the action `kafkaProduce`:
 ```
 wsk action invoke /myKafkaPkg/kafkaProduce -p topic in-topic -p value "this is a message" -i
 ```
-Check activation log to see every-20 is triggered every 20 seconds.
+Check activation log to see `MyKafkaTrigger` is triggered when a new message is sent.
 ```
 wsk activation poll -i
 ```
