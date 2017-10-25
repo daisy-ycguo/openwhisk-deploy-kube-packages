@@ -67,7 +67,7 @@ wsk package bind /whisk.system/messaging myKafkaPkg -p brokers "[\"kafka_host1:9
 ```
 Create a trigger:
 ```
-wsk trigger create MyKafkaTrigger -f /myKafkaPkg/kafkaFeed -p topic in-topic -i
+wsk trigger create MyKafkaTrigger -f myKafkaPkg/kafkaFeed -p topic in-topic -i
 ```
 Send a message to kafka topic by invoking the action `kafkaProduce`:
 ```
