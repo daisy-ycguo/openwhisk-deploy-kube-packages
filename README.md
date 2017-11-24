@@ -29,8 +29,8 @@ kubectl apply -f kafkaprovider.yml
 |DB_URL|URL|The url for a persistent storage (either CouchDB or Cloudant)|
 |DB_USER|String|Username for your DB credentials|
 |DB_PASS|String|Password for your DB credentials|
-|DB_PREFIX|Prefix for your kafka DB prefix|
-|LOCAL_DEV|Must be true if you deploy on your own openwhisk|
+|DB_PREFIX|String|Prefix for your kafka DB prefix|
+|LOCAL_DEV|String|Must be true if you deploy on your own openwhisk|
 |ROUTER_HOST|String|IP address of your OpenWhisk host. No usage for now, reserved for future use. |
 |ENDPOINT_AUTH|String|The OpenWhisk auth key to use when installing the actions. Typically this would be the auth key for `whisk.system` No usage for now, reserved for future use|
 
