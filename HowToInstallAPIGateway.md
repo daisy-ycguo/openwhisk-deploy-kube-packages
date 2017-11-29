@@ -1,4 +1,6 @@
-= How to install a complete API Gateway
+# How to install a complete API Gateway
+
+## Missing requested resources error
 
 When you are using api gateway in OpenWhisk, try this command:
 ```
@@ -49,3 +51,10 @@ e.g.
 ```
 
 After that, you can try `wsk api list -i` and check if you API gateway is installed completely.
+
+## Export API Gateway service
+If you want to access the URL managed by API Gatway exteranally from Kubernetes, you have to make sure the apigateway service has NodePort configured.
+```
+kubectl edit svc apigateway -n openwhisk -oyaml 
+```
+You need to change the `type: ClusterIP` to `type: NodePort`.
