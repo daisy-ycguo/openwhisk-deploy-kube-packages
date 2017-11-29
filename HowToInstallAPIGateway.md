@@ -33,7 +33,7 @@ Try below command, find `name: REDIS_HOST`, change the value from `redis.openwhi
 kubectl edit deployment apigateway -n openwhisk
 ```
 
-4. Edit file `$OPENWHISK_HOME/ansible/roles/routemgmt/files/installRouteMgmt.sh`, change:
+4. Edit file `$OPENWHISK_HOME/ansible/roles/routemgmt/files/installRouteMgmt.sh`, find below variables and set to:
 ```
 GW_USER=""
 GW_PWD=""
