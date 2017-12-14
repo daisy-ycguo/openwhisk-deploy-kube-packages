@@ -34,7 +34,7 @@ spec:
       - name: kafkaprovider
         imagePullPolicy: IfNotPresent
         # custom alarm provider image. Not sure what we want to do with this.
-        image: daisyycguo/kafkafeedprovider
+        image: openwhisk/kafkaprovider
         ports:
         - name: kafkaprovider
           containerPort: 8080
