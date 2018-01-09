@@ -18,14 +18,14 @@ spec:
         image: daisyycguo/packageinstall:0.8
         env:
         - name: "APIHOST_URL"
-          value: "10.0.0.144"
+          value: "nginx.openwhisk"
         - name: "DB_URL"
-          value: "http://whisk_admin:some_passw0rd@10.0.0.41:5984"
+          value: "http://whisk_admin:some_passw0rd@couchdb.openwhisk:5984"
         - name: "DB_PREFIX"
           value: "undefined"
         - name: "Q_DB_PREFIX"
           value: "mq_prefix"
         - name: "APIHOST"
-          value: "10.0.0.144"
+          value: "nginx.openwhisk"
         - name: "AUTH"
           value: "789c46b1-71f6-4ed5-8c54-816aa4f8c502:abczO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP"
