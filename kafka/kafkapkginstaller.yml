@@ -15,8 +15,10 @@ spec:
       containers:
       - name: kafkapkginstaller
         imagePullPolicy: IfNotPresent 
-        image: daisyycguo/kafkapkginstaller:0.8
+        image: openwhisk/kube-kafkapkginstaller
         env:
+        - name: "WHISK_CLI_VERSION"
+          value: "latest"
         - name: "APIHOST_URL"
           value: "nginx.openwhisk"
         - name: "DB_URL"
